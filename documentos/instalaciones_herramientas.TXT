@@ -1,0 +1,22 @@
+JAVA Basico
+Declaracion de Variables,Primitivos
+Manejo Clases
+POO
+
+
+
+
+-Kit de desarrollo y compilador de java para los sistemas operativos - jdk 10 o superior
+ https://www.oracle.com/java/technologies/downloads/
+-IDE de desarrollo Java EE - Eclipse IDE for Enterprise Java and Web Developers sitio oficial: 
+https://www.eclipse.org/downloads/packages/release/2021-09/r/eclipse-ide-enterprise-java-and-web-developers
+
+-Editor de codigo -Visual Studio Code- 
+https://code.visualstudio.com/
+
+-Base de datos MySQL
+xammp
+https://www.apachefriends.org/es/index.html
+o
+mysql workbench
+https://dev.mysql.com/downloads/mysql/
