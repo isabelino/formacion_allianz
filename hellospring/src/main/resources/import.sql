@@ -9,8 +9,8 @@ INSERT INTO clientes (nombre,apellido,email,telefono,create_at) VALUES ('Ramon',
 
 
 
-INSERT INTO usuarios (username,password,enabled) VALUES('rolando','1234',1);
-INSERT INTO usuarios (username,password,enabled) VALUES('admin','1234',1);
+INSERT INTO usuarios (username,password,enabled) VALUES('rolando','$2a$10$VlPKYJMvuKX24HscJnwHJenu8s/1zr8f.qmiQ1dbCoQP1K3HHOX.C',1);
+INSERT INTO usuarios (username,password,enabled) VALUES('admin','$2a$10$Z81mwqQ5FNnNUaKWHZ3/E.F1A8n91OZFHWyV2BogspAma0OhPxKW2',1);
 
 INSERT INTO roles (nombre) VALUES('ROLE_USER');
 INSERT INTO roles (nombre) VALUES('ROLE_ADMIN');
