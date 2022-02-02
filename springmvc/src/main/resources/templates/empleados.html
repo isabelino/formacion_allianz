@@ -9,33 +9,59 @@
 </head>
 <body>
 
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="#">Empleados</a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarNav">
+		      <ul class="navbar-nav">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" th:href="@{/empleados}">Todos los Empleados</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" th:href="@{/empleados/nuevo}">Nuevo empleado</a>
+		        </li>
+		        
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+
+
 	<div class="container">
 		<div class="row">
 			<h1>Lista de Empleados</h1>
 		</div>
+	
+	
+			<table class="table table-striped table-bordered">
+			  <thead class="table-dark">
+			    <tr>
+			    	<th>Nombre</th>
+			    	<th>Apellido</th>
+			    	<th>Email</th>
+			    	<th>Telefono</th>
+			    	<th>Aciones</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  		<tr th:each="datos: ${empleados}">
+			  			<td th:text=${datos.nombre} >Nombre</td>
+			  			<td th:text=${datos.apellido}>Apellido</td>
+			  			<td th:text=${datos.email}>Email</td>
+			  			<td th:text=${datos.telefono}>Telefono</td>
+			  			<td>
+			  				<a th:href="@{/empleados/editar/{id}(id=${datos.id})}" class="btn btn-info">Editar</a>
+			  				<a th:href="@{/empleado/{id}(id=${datos.id})}" class="btn btn-danger">Eliminar</a>
+			  			</td>
+			  		</tr>
+			    
+			  </tbody>
+			</table>
+	
 	</div>
-	
-	<table class="table">
-	  <thead class="table-dark">
-	    <tr>
-	    	<th>Nombre</th>
-	    	<th>Apellido</th>
-	    	<th>Email</th>
-	    	<th>Telefono</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	  		<tr>
-	  			<td>Nombre</td>
-	  			<td>Apellido</td>
-	  			<td>Email</td>
-	  			<td>Telefono</td>
-	  		</tr>
-	    
-	  </tbody>
-	</table>
-	
-	
 
 </body>
 </html>
